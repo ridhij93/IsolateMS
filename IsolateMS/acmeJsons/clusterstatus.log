@@ -1,0 +1,6 @@
+ANALYSIS_DETAILS:: GCN selected for Clustering.
+ANALYSIS_DETAILS:: Classes used in clustering: 30
+ANALYSIS_DETAILS:: Number of features selected: 96
+ANALYSIS_DETAILS:: Classes identified as utilities: 0
+ANALYSIS_DETAILS:: Classes skipped in total (utilities/nofeatures/others): 8
+CLUSTER_EXECUTION_STATUS: GCN completed successfully.
