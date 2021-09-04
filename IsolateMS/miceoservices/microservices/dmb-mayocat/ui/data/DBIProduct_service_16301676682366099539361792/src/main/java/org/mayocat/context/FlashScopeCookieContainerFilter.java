@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2012, Mayocat <hello@mayocat.org>
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+package org.mayocat.context;
+
+import org.mayocat.context.scope.Flash;
+import org.mayocat.context.scope.cookie.CookieFlash;
+import com.sun.jersey.spi.container.ContainerRequestFilter;
+import com.sun.jersey.spi.container.ContainerResponseFilter;
+import com.ibm.research.cma.api.MicroserviceApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * Flash scope container filter. It is not encrypted.
+ *
+ * @version $Id: 2b4eacff48b9e8189c44e4350fb5e4f1fe76c4b1 $
+ */
+public class FlashScopeCookieContainerFilter extends AbstractScopeCookieContainerFilter<Flash> implements ContainerResponseFilter, ContainerRequestFilter {
+
+    @Override
+    protected String getScopeAndCookieName() {
+        return (String) null;
+    }
+
+    @Override
+    protected boolean scopeExistsAndNotEmpty(WebContext context) {
+        return (Boolean) null;
+    }
+
+    @Override
+    protected Flash getScope(WebContext context) {
+        return (Flash) null;
+    }
+
+    @Override
+    protected void setScope(WebContext context, Flash scope) {
+        return;
+    }
+
+    @Override
+    protected boolean encryptAndSign() {
+        return (Boolean) null;
+    }
+
+    @Override
+    protected Flash cast(Object object) {
+        return (Flash) null;
+    }
+
+    public int id = 0;
+
+    public static FlashScopeCookieContainerFilter getObject(int id) {
+        FlashScopeCookieContainerFilter obj = (FlashScopeCookieContainerFilter) new Object();
+        obj.id = id;
+        return obj;
+    }
+}
+

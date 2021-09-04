@@ -1,0 +1,113 @@
+---
+swagger: "2.0"
+info:
+  version: "0.1"
+  title: "Msg_service"
+paths:
+  /PingBean/setMsg:
+    post:
+      operationId: "setMsg-7"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "msg"
+        in: "query"
+        description: "java.lang.String msg"
+        required: true
+        type: "string"
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2ServletRcv/init:
+    post:
+      operationId: "init-5"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingSession1/doGet:
+    post:
+      operationId: "doGet-8"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2MDBQueue/doGet:
+    post:
+      operationId: "doGet-2"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingSession1/init:
+    post:
+      operationId: "init-9"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingSession1/doPost:
+    post:
+      operationId: "doPost-10"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2MDBQueue/doPost:
+    post:
+      operationId: "doPost-1"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2MDBQueue/init:
+    post:
+      operationId: "init-3"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2ServletRcv/doPost:
+    post:
+      operationId: "doPost-4"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /PingServlet2ServletRcv/doGet:
+    post:
+      operationId: "doGet-6"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+definitions: {}
+

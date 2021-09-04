@@ -1,0 +1,423 @@
+---
+swagger: "2.0"
+info:
+  version: "0.1"
+  title: "Profile_service"
+paths:
+  /AccountDataBean/getLastLogin:
+    get:
+      operationId: "getLastLogin-6"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "string"
+  /TradeSLSBBean/getAccountProfileData:
+    get:
+      operationId: "getAccountProfileData-13"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "userID"
+        in: "query"
+        description: "java.lang.String userID"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            $ref: "#/definitions/AccountProfileDataBean"
+  /TradeSLSBBean/getQuote:
+    get:
+      operationId: "getQuote-10"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "symbol"
+        in: "query"
+        description: "java.lang.String symbol"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            $ref: "#/definitions/QuoteDataBean"
+  /TradeSLSBBean/pingTwoPhase:
+    post:
+      operationId: "pingTwoPhase-11"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "queueContext"
+        in: "query"
+        description: "java.lang.String queueContext"
+        required: true
+        type: "string"
+      responses:
+        201:
+          description: "Successful response 201"
+        500:
+          description: "Error response: 500:java.lang.Exception"
+  /TradeDirect/getConnPublic:
+    get:
+      operationId: "getConnPublic-16"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "object"
+        500:
+          description: "Error response: 500:java.lang.Exception"
+  /AccountDataBean/getCreationDate:
+    get:
+      operationId: "getCreationDate-8"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "string"
+  /TradeSLSBBean/getOrders:
+    get:
+      operationId: "getOrders-9"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "userID"
+        in: "query"
+        description: "java.lang.String userID"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/OrderDataBean"
+  /AccountDataBean/getLoginCount:
+    get:
+      operationId: "getLoginCount-2"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "integer"
+  /PingServlet/doGet:
+    post:
+      operationId: "doGet-19"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /TradeDirect/checkDBProductName:
+    post:
+      operationId: "checkDBProductName-17"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+        500:
+          description: "Error response: 500:java.lang.Exception"
+  /AccountDataBean/getLogoutCount:
+    get:
+      operationId: "getLogoutCount-1"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "integer"
+  /AccountDataBean/getProfileID:
+    get:
+      operationId: "getProfileID-4"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "string"
+  /PingServlet/init:
+    post:
+      operationId: "init-20"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+  /AccountDataBean/getAccountID:
+    get:
+      operationId: "getAccountID-3"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "integer"
+  /AccountDataBean/getBalance:
+    get:
+      operationId: "getBalance-7"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "number"
+  /TradeDirect/updateQuotePriceVolumeInt:
+    post:
+      operationId: "updateQuotePriceVolumeInt-14"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "openPrice"
+        in: "query"
+        description: "java.lang.String openPrice"
+        required: true
+        type: "string"
+      - name: "newVolume"
+        in: "query"
+        description: "java.math.BigDecimal newVolume"
+        required: true
+        type: "number"
+      - name: "newPrice"
+        in: "query"
+        description: "double newPrice"
+        required: true
+        type: "number"
+      - name: "change"
+        in: "query"
+        description: "boolean change"
+        required: true
+        type: "boolean"
+      responses:
+        201:
+          description: "Successful response 201"
+        500:
+          description: "Error response: 500:java.lang.Exception"
+  /TradeDirect/getQuote:
+    get:
+      operationId: "getQuote-15"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - $ref: "#/parameters/object_conn"
+      - name: "symbol"
+        in: "query"
+        description: "java.lang.String symbol"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            $ref: "#/definitions/QuoteDataBean"
+        500:
+          description: "Error response: 500:java.lang.Exception"
+  /TradeSLSBBean/getHoldings:
+    get:
+      operationId: "getHoldings-12"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "userID"
+        in: "query"
+        description: "java.lang.String userID"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/HoldingDataBean"
+  /AccountDataBean/getOpenBalance:
+    get:
+      operationId: "getOpenBalance-5"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Successful response 200"
+          schema:
+            type: "number"
+  /PingServlet/doPost:
+    post:
+      operationId: "doPost-18"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Successful response 201"
+definitions:
+  OrderDataBean:
+    properties:
+      symbol:
+        type: "string"
+      orderType:
+        type: "string"
+      quantity:
+        type: "number"
+      orderID:
+        type: "integer"
+      orderFee:
+        type: "number"
+      orderStatus:
+        type: "string"
+      holding:
+        $ref: "#/definitions/HoldingDataBean"
+      serialVersionUID:
+        type: "integer"
+      quote:
+        $ref: "#/definitions/QuoteDataBean"
+      price:
+        type: "number"
+      completionDate:
+        type: "string"
+      openDate:
+        type: "string"
+      account:
+        $ref: "#/definitions/AccountDataBean"
+  HoldingDataBean:
+    properties:
+      serialVersionUID:
+        type: "integer"
+      purchaseDate:
+        type: "string"
+      quantity:
+        type: "number"
+      quote:
+        $ref: "#/definitions/QuoteDataBean"
+      purchasePrice:
+        type: "number"
+      account:
+        $ref: "#/definitions/AccountDataBean"
+      holdingID:
+        type: "integer"
+      quoteID:
+        type: "string"
+  AccountProfileDataBean:
+    properties:
+      serialVersionUID:
+        type: "integer"
+      address:
+        type: "string"
+      passwd:
+        type: "string"
+      fullName:
+        type: "string"
+      creditCard:
+        type: "string"
+      userID:
+        type: "string"
+      email:
+        type: "string"
+      account:
+        $ref: "#/definitions/AccountDataBean"
+  QuoteDataBean:
+    properties:
+      volume:
+        type: "number"
+      symbol:
+        type: "string"
+      high:
+        type: "number"
+      serialVersionUID:
+        type: "integer"
+      low:
+        type: "number"
+      price:
+        type: "number"
+      companyName:
+        type: "string"
+      open1:
+        type: "number"
+      change1:
+        type: "number"
+  AccountDataBean:
+    properties:
+      accountID:
+        type: "integer"
+      lastLogin:
+        type: "string"
+      serialVersionUID:
+        type: "integer"
+      balance:
+        type: "number"
+      profileID:
+        type: "string"
+      profile:
+        $ref: "#/definitions/AccountProfileDataBean"
+      orders:
+        type: "array"
+        items:
+          $ref: "#/definitions/OrderDataBean"
+      logoutCount:
+        type: "integer"
+      holdings:
+        type: "array"
+        items:
+          $ref: "#/definitions/HoldingDataBean"
+      creationDate:
+        type: "string"
+      loginCount:
+        type: "integer"
+      openBalance:
+        type: "number"
+parameters:
+  object_conn:
+    in: "body"
+    name: "conn"
+    description: "java.sql.Connection conn"
+    required: true
+    schema:
+      type: "object"
+
