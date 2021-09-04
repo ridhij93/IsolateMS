@@ -1,9 +1,0 @@
-com.acmeair.mongo.services.FlightServiceImpl
-com.acmeair.mongo.services.BookingServiceImpl
-com.acmeair.service.ServiceLocator$2
-com.acmeair.service.ServiceLocator$1
-com.acmeair.service.FlightService
-com.acmeair.mongo.services.AuthServiceImpl
-com.acmeair.service.ServiceLocator
-com.acmeair.mongo.services.CustomerServiceImpl
-com.acmeair.service.AuthService
